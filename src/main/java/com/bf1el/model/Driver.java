@@ -5,9 +5,12 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -22,7 +25,6 @@ import lombok.NoArgsConstructor;
 //lombok bilbiotkea koja pravi automatski getere , setere i procitaj na netu sta jos.
 @Data
 // lombok anotacija za konstruktor bez parametara
-@NoArgsConstructor
 //ignorise dodatne json propertije u requestu
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Driver implements Serializable {
@@ -46,8 +48,9 @@ public class Driver implements Serializable {
 	@Column(name = "drv_birth_date")
 	private Date drvBirthDate;
 	
-	@Column(name = "drv_nat_id")
-	private Long drvNatId;
+	@JoinColumn(name = "drv_nat_id")
+	@ManyToOne(fetch = FetchType.EAGER)
+	private Nationality nationality;
 	
 	@Column(name = "drv_username")
 	private String drvUsername;
@@ -55,8 +58,9 @@ public class Driver implements Serializable {
 	@Column(name = "drv_points")
 	private Integer drvPoints;
 	
-	@Column(name = "drv_team_id")
-	private Integer drvTeamId;
+	@JoinColumn(name = "drv_team_id")
+	@ManyToOne(fetch = FetchType.EAGER)
+	private Team team;
 	
 	@Column(name = "drv_number")
 	private Integer drvNumber;
