@@ -6,6 +6,7 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.bf1el.common.EntityNotFoundException;
@@ -17,6 +18,10 @@ public class UserService {
 		
 		@Autowired
 		private UserRepository userRepository;
+		
+		
+	    @Autowired
+	    private BCryptPasswordEncoder bCryptPasswordEncoder;
 		
 		@Autowired
 		public UserService(UserRepository userRepository) {
@@ -36,9 +41,13 @@ public class UserService {
 		}
 		@Transactional
 		public User create(User user) {
-			
+			user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 			User usr = userRepository.save(user);
 			return usr;
 			
 		}
+		
+		public User findByUsername(String username) {
+	        return userRepository.findByUsername(username);
+	    }
 }

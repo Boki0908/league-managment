@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -28,20 +29,26 @@ public class User implements Serializable{
 	private Long userId;
 	
 	@Column(name = "user_first_name")
-	private String userFirstName;
+	private String firstName;
 	
 	@Column(name = "user_last_name")
-	private String userLastName;
+	private String lastName;
 	
 	@Column(name = "user_username")
-	private String userUsername;
+	private String username;
+	
+	@Column(name = "user_password")
+	private String password;
+	
+	@Transient
+    private String passwordConfirm;
 	
 	@Column(name = "user_email")
-	private String userEmail;
+	private String email;
 	
 	@Column(name = "user_birth_date")
-	private Date userBirthDate;
+	private Date birthDate;
 	
 	@Column(name = "user_enabled")
-	private Boolean userEnabled;
+	private Boolean enabled;
 }

@@ -10,7 +10,7 @@ public class TestController {
 
 	@GetMapping({ "/", "/hello" })
 	public String hello(Model model,
-			@RequestParam(value = "name", required = false, defaultValue = "Boco... PUN GAS BF1EL App") String name) {
+			@RequestParam(value = "name", required = false, defaultValue = "BossSco... PUN GAS BF1EL App") String name) {
 
 		model.addAttribute("name", name);
 
