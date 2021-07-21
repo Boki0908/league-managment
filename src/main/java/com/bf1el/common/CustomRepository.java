@@ -11,6 +11,8 @@ import org.springframework.data.repository.NoRepositoryBean;
 @NoRepositoryBean
 public interface CustomRepository<T,ID extends Serializable> extends JpaRepository<T,ID> {
 	
+	//sluze za rucnu manipulaciju sa Objektom ukoliko ima nekih bagova, da nece da se snimi npr 
+	//vrednost u bazu ili da nece da ode u detach....
 	void refresh(T t);
 	void detach(T t);
 	void clear();

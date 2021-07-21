@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class TestController {
 
-	@GetMapping({ "/", "/hello" })
-	public String hello(Model model,
-			@RequestParam(value = "name", required = false, defaultValue = "BossSco... PUN GAS BF1EL App") String name) {
-
-		model.addAttribute("name", name);
-
-		return "hello";
-	}
+//	@GetMapping({ "/", "/hello" })
+//	public String hello(Model model,
+//			@RequestParam(value = "name", required = false, defaultValue = "BossSco... PUN GAS BF1EL App") String name) {
+//
+//		model.addAttribute("name", name);
+//
+//		return "hello";
+//	}
 }

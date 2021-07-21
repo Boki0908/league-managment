@@ -14,10 +14,12 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Builder;
 import lombok.Data;
 @Entity
-@Table(name="userrole")
+@Table(name="user_role")
 @Data
+@Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserRole implements Serializable{
 	

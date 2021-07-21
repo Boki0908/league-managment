@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;
@@ -37,6 +39,8 @@ public class User implements Serializable{
 	@Column(name = "user_username")
 	private String username;
 	
+	// ne bi bilo lose gender da imamo mr ili ms
+	
 	@Column(name = "user_password")
 	private String password;
 	
@@ -46,6 +50,7 @@ public class User implements Serializable{
 	@Column(name = "user_email")
 	private String email;
 	
+	@DateTimeFormat(pattern = "MM-dd-yyyy")
 	@Column(name = "user_birth_date")
 	private Date birthDate;
 	
