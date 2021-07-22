@@ -13,9 +13,9 @@
 
 .custom-nav{
 	color:#e3790f;
+	font-weight: 700;
 	margin-left:55px;
 }
-
 
 
 .custom-nvbar{
@@ -25,6 +25,14 @@
 .container{
 	width:1200px;
 	margin:0px auto;
+
+}
+.custom-box{
+	color:#fff;
+	font-size:75px;
+	font-family:raleway-bold;
+	line-height:90px;
+	background-color: #0c0d0efa!important;
 }
 
 .welcome-text{
@@ -42,14 +50,38 @@
 .lg-btn {
 	color: black;
 	background-color:#e3790f;
+	border-color: #e3790f;
+	margin-left:10px;
 }
 
 .lg-btn:hover {
 	color: #e3790f;
   background-color: black;
+  border-color: black;
 }
+
+
 
 .welcome-box{
 	color: #e3790f;
   background-color: black;
+}
+
+.drivers-box{
+	color: #d49659e8;
+  background-color: #15100ceb;
+}
+
+.table{
+	color: #d49659e8;
+}
+
+.nat-flag{
+	max-width: 50px;
+    max-height: 150px;
+}
+
+.team-logo{
+	    max-width: 140px;
+    max-height: 50px;
 }

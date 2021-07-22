@@ -16,7 +16,7 @@
   </head>
 
   <body>
-
+<div class="custom-box">
     <div class="container">
       <form method="POST" action="${contextPath}/login" class="form-signin">
         <h2 class="form-heading">Log in</h2>
@@ -34,7 +34,7 @@
         </div>
       </form>
     </div>
-
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
   </body>

@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 @Entity
-@Table(name="enginesupplier")
+@Table(name="engine_supplier")
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class EngineSupplier implements Serializable {

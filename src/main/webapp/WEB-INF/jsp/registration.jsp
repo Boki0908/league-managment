@@ -11,10 +11,11 @@
 
       <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
       <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
+      <link href="${contextPath}/resources/css/style.css" rel="stylesheet">
   </head>
 
   <body>
-
+<div class="custom-box">
     <div class="container">
 
         <form:form method="POST" modelAttribute="userForm" class="form-signin">
@@ -76,11 +77,11 @@
                 </div>
             </spring:bind>
 
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+            <button class="lg-btn btn btn-lg btn-block" type="submit">Submit</button>
         </form:form>
 
     </div>
-
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
   </body>

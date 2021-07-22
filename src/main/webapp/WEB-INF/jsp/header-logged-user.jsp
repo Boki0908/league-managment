@@ -16,7 +16,7 @@
 <body>
 
 <nav class="custom-nvbar navbar navbar-expand-lg navbar-light bg-light">
-  <a class="custom-nav" href="#">
+  <a class="custom-nav" href="/">
   <img style="max-width:100px; margin-top: -7px;"
              src="${contextPath}/resources/images/bf1el-logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,12 +51,9 @@
         <a class="custom-nav" href="#">Contact</a>
       </li>
     </ul>
-     <form method="get" action="/login" class="form-inline my-2 my-lg-0">
-      <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">LOGIN</button>
-      
-    </form>
-    <form method="get" action="/registration" class="form-inline my-2 my-lg-0">
-      <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">Registration</button>
+    
+    <form method="get" action="/logout" class="form-inline my-2 my-lg-0">
+      <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
     </form>
   </div>
 </nav>
