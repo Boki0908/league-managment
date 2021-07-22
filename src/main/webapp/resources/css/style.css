@@ -1,0 +1,55 @@
+
+.home-content-wrapper{
+	background-image:uri('../images/home.jpg');
+	background-size:cover;
+	height:100px;
+}
+.overlay-box{
+	padding:200px 0px;
+	box-sizing:border-box;
+	background:rgba(0, 0, 0, 0.5);
+
+}
+
+.custom-nav{
+	color:#e3790f;
+	margin-left:55px;
+}
+
+
+
+.custom-nvbar{
+	background-color: #0c0d0efa!important;
+}
+
+.container{
+	width:1200px;
+	margin:0px auto;
+}
+
+.welcome-text{
+	color:#fff;
+	font-size:75px;
+	font-family:raleway-bold;
+	line-height:90px;	
+	
+}
+
+.slider-picture{
+	height:600px;
+}
+
+.lg-btn {
+	color: black;
+	background-color:#e3790f;
+}
+
+.lg-btn:hover {
+	color: #e3790f;
+  background-color: black;
+}
+
+.welcome-box{
+	color: #e3790f;
+  background-color: black;
+}

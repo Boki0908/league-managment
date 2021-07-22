@@ -45,7 +45,7 @@
             
              <spring:bind path="birthDate">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="text" path="birthDate" class="form-control" placeholder="birthDate"
+                    <form:input type="text" path="birthDate" class="form-control" placeholder="Birth Date"
                                 autofocus="true"></form:input>
                     <form:errors path="birthDate"></form:errors>
                 </div>
