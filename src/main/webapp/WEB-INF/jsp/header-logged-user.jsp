@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Balkan F1 Esports League</title>
+<link rel="shortcut icon" type="image/png" href="${contextPath}/resources/images/logo.png">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -29,7 +30,7 @@
         <a class="custom-nav" href="/drivers">Drivers</a>
       </li>
       <li class="nav-item">
-        <a class="custom-nav" href="#">Teams</a>
+        <a class="custom-nav" href="/teams">Teams</a>
       </li>
       <li class="nav-item dropdown">
         <a class="custom-nav dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,13 +43,13 @@
         </div>
       </li>
      <li class="nav-item">
-        <a class="custom-nav" href="#">Rules</a>
+        <a class="custom-nav" href="/rules">Rules</a>
       </li>
       <li class="nav-item">
-        <a class="custom-nav" href="#">History</a>
+        <a class="custom-nav" href="/history">History</a>
       </li>
       <li class="nav-item">
-        <a class="custom-nav" href="#">Contact</a>
+        <a class="custom-nav" href="/contact">Contact</a>
       </li>
     </ul>
     

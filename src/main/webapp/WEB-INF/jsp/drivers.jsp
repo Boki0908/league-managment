@@ -1,7 +1,10 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
+<title>BF1el</title>
 <%@ include file = "header-logged-user.jsp" %>
+<link rel="shortcut icon" type="image/png" href="${contextPath}../resources/images/logo.png">
 
 <div class="drivers-box">
 <h2 style="padding:50px; ">LIST OF ACTIVE BF1EL DRIVERS</h2>

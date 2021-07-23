@@ -15,6 +15,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -28,12 +29,16 @@ import lombok.NoArgsConstructor;
 //ignorise dodatne json propertije u requestu
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Driver implements Serializable {
-
+	
+	public Driver () {}
 	/**
 	* 
 	*/
 	private static final long serialVersionUID = 1L;
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	@Id
 	@Column(name = "drv_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

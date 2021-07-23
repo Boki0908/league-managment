@@ -22,11 +22,7 @@
 	background-color: #0c0d0efa!important;
 }
 
-.container{
-	width:1200px;
-	margin:0px auto;
 
-}
 .custom-box{
 	color:#fff;
 	font-size:75px;
@@ -72,16 +68,69 @@
   background-color: #15100ceb;
 }
 
+.team-drivers-box{
+	color: #131110e8;
+    background-color: #ef6d04;
+    border-radius: 20px;
+}
+
 .table{
 	color: #d49659e8;
+}
+
+.teamname{
+ color:black;
 }
 
 .nat-flag{
 	max-width: 50px;
     max-height: 150px;
+    border-radius: 30%;
 }
 
 .team-logo{
-	    max-width: 140px;
+	max-width: 140px;
     max-height: 50px;
 }
+
+.teamlogo {
+	width: 450px;
+    height: 90px;
+}        
+.my-cl{
+    	font-size:20px;
+}   
+      	
+.container-teams{
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align:center;
+}     
+
+.listing-team-drivers{
+	    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15;
+}
+.listing-info{
+	display: grid;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.custom-wrapper{
+	margin-bottom:20;
+	background-color: #f182002b;
+	border-radius: 20px;
+	
+}
+
+
+	
+  	
+         

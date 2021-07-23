@@ -17,4 +17,16 @@ public class AppController {
     public String welcomeConvert(Model model) {
         return "redirect:/";
     }
+	@GetMapping("/contact")
+    public String contact(Model model) {
+        return "contact";
+    }
+	@GetMapping("/rules")
+    public String rules(Model model) {
+        return "rules";
+    }
+	@GetMapping("/history")
+    public String history(Model model) {
+        return "history";
+    }
 }

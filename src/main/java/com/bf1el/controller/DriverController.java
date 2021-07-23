@@ -11,12 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
+
 
 import com.bf1el.model.Driver;
-import com.bf1el.model.User;
+
 import com.bf1el.service.DriverService;
 
 @Controller
@@ -37,6 +35,7 @@ public class DriverController {
 
 	    return "drivers";
 	}
+	
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<?>findById(@PathVariable("id")Long id){
