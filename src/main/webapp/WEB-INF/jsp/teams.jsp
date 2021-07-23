@@ -2,25 +2,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 	
-<title>BF1el</title>
-
 <%@ include file = "header-logged-user.jsp" %>
-    
+ <div class="welcome-box">
+ <div class="header-box">
+ <h2 class="table_hdrs" style="padding:50px; ">LIST OF ACTIVE BF1EL DRIVERS IN RES F1</h2></div>   
 	<div class="container listing container-teams">   
-	<div class="container listing-header">
-		<fieldset class="f1-border--top-right f1-border-color--carbonBlack">
-			<div class="row">
-				<div class="col-12">
-					<div class="team-drivers-box">
-							<h2 style="padding:50px; ">LIST OF ACTIVE BF1EL DRIVERS IN RES F1</h2>
-							
-
-    				</div>
-					
-				</div>
-			</div>
-		</fieldset>
-	</div>
     <div class="row">
     <c:forEach items="${teams}" var="teams"> 
   <div class="col-12 col-md-6"> 
@@ -62,6 +48,6 @@
 </div>
 
  </div>  
-    
+  </div>    
     
 <%@ include file = "footer.jsp" %>

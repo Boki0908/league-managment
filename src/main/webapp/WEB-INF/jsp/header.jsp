@@ -30,7 +30,7 @@
         <a class="custom-nav" href="/drivers">Drivers</a>
       </li>
       <li class="nav-item">
-        <a class="custom-nav" href="teams">Teams</a>
+        <a class="custom-nav" href="/teams">Teams</a>
       </li>
       <li class="nav-item dropdown">
         <a class="custom-nav dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,7 +38,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
       
-          <a class="dropdown-item" href="#">Driver Standings</a>
+          <a class="dropdown-item" href="/driver_standings">Driver Standings</a>
            <a class="dropdown-item" href="#">Team Standings</a>
         </div>
       </li>

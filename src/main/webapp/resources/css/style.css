@@ -56,11 +56,18 @@
   border-color: black;
 }
 
+.table_hdrs{
+	text-align:center;
+}
 
+.header-box{
+	color: #e3790f;
+  background-color: black;
+}
 
 .welcome-box{
 	color: #e3790f;
-  background-color: black;
+  background-color: #000000d4;
 }
 
 .drivers-box{
@@ -76,6 +83,14 @@
 
 .table{
 	color: #d49659e8;
+	margin: auto;
+    width: 50% !important;
+}
+
+.table-standings{
+	color: #d49659e8;
+	margin: auto;
+    width: 50% !important;
 }
 
 .teamname{
@@ -114,7 +129,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15;
+    margin-bottom: 15px;
 }
 .listing-info{
 	display: grid;
@@ -124,8 +139,8 @@
 }
 
 .custom-wrapper{
-	margin-bottom:20;
-	background-color: #f182002b;
+	margin-bottom:20px;
+	background-color: #e0dbd817;
 	border-radius: 20px;
 	
 }

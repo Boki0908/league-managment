@@ -30,6 +30,10 @@ public class DriverService {
 		return driverRepository.findAll();
 	}
 	
+	public List<Driver> getDriversByPoints(){
+		return driverRepository.findDriversByStandings();
+	}
+	
 	public Driver findById(Long id) {
 		Optional<Driver> driver = driverRepository.findById(id);
 		if(!driver.isPresent()) {

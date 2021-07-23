@@ -49,6 +49,15 @@ public class DriverController {
 		
 		return new ResponseEntity(driverDB,HttpStatus.CREATED);
 	}
+	
+	@GetMapping("/driver_standings")
+	//responsen entity je tip koji vracamo 
+	public  String driverStandings(Model model){
+		List<Driver> drivers = driverService.getDriversByPoints();
+		model.addAttribute("drivers", drivers);
+
+	    return "driver_standings";
+	}
 
 }
 

@@ -1,6 +1,8 @@
 <%@ include file = "header.jsp" %>
 
-<div class="welcome-box"><h2 style="padding:50px; ">Balkan F1 Esports League<br> RULES</h2></div>
+<div class="welcome-box">
+ <div class="header-box">
+ <h2 style="padding:50px; ">Balkan F1 Esports League<br> RULES</h2></div>
 
 <main role="main" class="container">
 	<div class="starter-template">
@@ -197,5 +199,5 @@ qualification session<br>
 	
 	</div>
 </main>
-
+</div>
 <%@ include file = "footer.jsp" %>

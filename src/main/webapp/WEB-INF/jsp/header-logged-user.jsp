@@ -38,7 +38,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
       
-          <a class="dropdown-item" href="#">Driver Standings</a>
+          <a class="dropdown-item" href="/driver_standings">Driver Standings</a>
            <a class="dropdown-item" href="#">Team Standings</a>
         </div>
       </li>
