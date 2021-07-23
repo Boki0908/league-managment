@@ -102,6 +102,11 @@
     max-height: 150px;
     border-radius: 30%;
 }
+.dd-nat-flag{
+	max-width: 20px;
+    max-height: 50px;
+    border-radius: 30%;
+}
 
 .team-logo{
 	max-width: 140px;
@@ -145,7 +150,14 @@
 	
 }
 
+.form-new-driver{
+	max-width: 50%;
+    padding: 15px;
+    margin: 0 auto;
+}
 
-	
+.drow-downs-custom{
+	margin-bottom:20px;
+}	
   	
          

@@ -13,6 +13,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Builder;
@@ -50,6 +52,7 @@ public class Driver implements Serializable {
 	@Column(name = "drv_last_name")
 	private String drvLastName;
 	
+	@DateTimeFormat(pattern = "MM-dd-yyyy")
 	@Column(name = "drv_birth_date")
 	private Date drvBirthDate;
 	
