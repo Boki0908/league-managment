@@ -31,12 +31,11 @@
 	background-color: #0c0d0efa!important;
 }
 
-.welcome-text{
+.login-box{
 	color:#fff;
-	font-size:75px;
 	font-family:raleway-bold;
-	line-height:90px;	
-	
+	line-height:90px;
+	background-color: #0c0d0efa!important;
 }
 
 .slider-picture{
@@ -47,7 +46,7 @@
 	color: black;
 	background-color:#e3790f;
 	border-color: #e3790f;
-	margin-left:10px;
+	margin-right:10px
 }
 
 .lg-btn:hover {
@@ -68,6 +67,14 @@
 .welcome-box{
 	color: #e3790f;
   background-color: #000000d4;
+}
+
+.welcome-text{
+	color:#fff;
+	font-size:75px;
+	font-family:raleway-bold;
+	line-height:90px;	
+	
 }
 
 .drivers-box{
@@ -160,4 +167,12 @@
 	margin-bottom:20px;
 }	
   	
-         
+.dropdown-box{
+	width: 246px;
+}   
+.my-clas{
+	margin:20px;
+}
+.fot-1{
+	color: #e3790f;
+}

@@ -1,4 +1,5 @@
 <%@ include file = "header.jsp" %>
+
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -20,6 +21,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
 <div class="welcome-box"><h2 style="padding:50px; ">Welcome to Balkan F1 Esports League</h2></div>
 
 <%@ include file = "footer.jsp" %>

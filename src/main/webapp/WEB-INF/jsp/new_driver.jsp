@@ -80,7 +80,7 @@
            
 			<label>Nationality</label>
 
-			<select id="nations" name="nations">
+			<select id="nations" class="dropdown-box" name="nations">
 			<c:forEach items="${nations}" var="nations">
  			 <option value="${nations.natId}">
  			 ${nations.natName}</option></c:forEach>
@@ -94,7 +94,7 @@
            
 			<label>Team Name</label>
 
-			<select id="teams" name="teams">
+			<select id="teams" class="dropdown-box"  name="teams">
 			<c:forEach items="${teams}" var="teams">
  			 <option value="${teams.teamId}">
  			 ${teams.teamName}</option></c:forEach>

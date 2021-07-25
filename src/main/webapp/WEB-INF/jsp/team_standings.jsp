@@ -5,37 +5,33 @@
 
 <div class="welcome-box">
 <div class="header-box">
-<h2 class="table_hdrs" style="padding:50px; ">RES FORMULA 1 CHAMPIONSHIP<br> DRIVER STANDINGS</h2></div>
+<h2 class="table_hdrs" style="padding:50px; ">RES FORMULA 1 CHAMPIONSHIP<br> CONSTRUCTORS STANDINGS</h2></div>
 
-<table class="table table-inverse">
+<table  class="table table-inverse">
 
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nationality</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Racing No</th>
       <th scope="col">Team</th>
+      <th scope="col">Logo</th>
+      <th scope="col">Nationality</th>
       <th scope="col">Points</th>
     </tr>
   </thead>
   <tbody>
     
-    <c:forEach items="${drivers}" var="drivers" varStatus="loopStatus">
+    <c:forEach items="${teams}" var="teams" varStatus="loopStatus">
     <tr>
       
       <td>${loopStatus.index + 1}</td>
+      <td>${teams.teamName}</td>
       <td>
-      	<img src="${drivers.nationality.natFlag}" class="nat-flag" alt="Flag">
+      	<img class ="team-logo"src="${teams.teamLogo}" class="nat-flag" alt="Flag">
       </td>	
-      <td>${drivers.drvFirstName}</td>
-      <td>${drivers.drvLastName}</td>
-      <td>${drivers.drvNumber}</td>
       <td>
-      	<img class ="team-logo"src="${drivers.team.teamLogo}" class="nat-flag" alt="Flag">
+      	<img src="${teams.nationality.natFlag}" class="nat-flag" alt="Flag">
       </td>	
-      <td>${drivers.drvPoints}</td>
+      <td>${teams.teamPoints}</td>
       </tr>
       </c:forEach>
     

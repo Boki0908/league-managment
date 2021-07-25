@@ -17,7 +17,7 @@
 <body>
 
 <nav class="custom-nvbar navbar navbar-expand-lg navbar-light bg-light">
-  <a class="custom-nav" href="#">
+  <a class="custom-nav" href="/">
   <img style="max-width:100px; margin-top: -7px;"
              src="${contextPath}/resources/images/bf1el-logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
       
           <a class="dropdown-item" href="/driver_standings">Driver Standings</a>
-           <a class="dropdown-item" href="#">Team Standings</a>
+           <a class="dropdown-item" href="/team_standings">Team Standings</a>
         </div>
       </li>
      <li class="nav-item">
@@ -49,7 +49,7 @@
         <a class="custom-nav" href="/history">History</a>
       </li>
       <li class="nav-item">
-        <a class="custom-nav" href="#">Contact</a>
+        <a class="custom-nav" href="/contact">Contact</a>
       </li>
     </ul>
      <form method="get" action="/login" class="form-inline my-2 my-lg-0">

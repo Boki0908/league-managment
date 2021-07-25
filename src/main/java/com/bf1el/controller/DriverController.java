@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-
 import com.bf1el.model.Driver;
 import com.bf1el.model.Nationality;
 import com.bf1el.model.Team;
@@ -24,13 +23,13 @@ import com.bf1el.service.TeamsService;
 
 @Controller
 public class DriverController {
-	
+
 	private DriverService driverService;
-	
+
 	private NationalityService nationalityService;
-	
+
 	private TeamsService teamsService;
-	
+
 	@Autowired
 	public DriverController(DriverService driverService, NationalityService nationalityService,
 			TeamsService teamsService) {
@@ -38,52 +37,51 @@ public class DriverController {
 		this.nationalityService = nationalityService;
 		this.teamsService = teamsService;
 	}
-	
+
 	@GetMapping("/drivers")
-	//responsen entity je tip koji vracamo 
-	public  String drivers(Model model){
+	// responsen entity je tip koji vracamo
+	public String drivers(Model model) {
 		List<Driver> drivers = driverService.getAll();
 		model.addAttribute("drivers", drivers);
+		return "drivers";
+	}
 
-	    return "drivers";
-	}
-	
-	
 	@GetMapping("/{id}")
-	public ResponseEntity<?>findById(@PathVariable("id")Long id){
+	public ResponseEntity<?> findById(@PathVariable("id") Long id) {
 		return new ResponseEntity(driverService.findById(id), HttpStatus.OK);
-		
+
 	}
-	
+
 	@PostMapping
 	public ResponseEntity<?> add(@RequestBody Driver input) throws Exception {
 		Driver driverDB = driverService.create(input);
-		
-		return new ResponseEntity(driverDB,HttpStatus.CREATED);
+
+		return new ResponseEntity(driverDB, HttpStatus.CREATED);
 	}
-	
+
 	@GetMapping("/driver_standings")
-	//responsen entity je tip koji vracamo 
-	public  String driverStandings(Model model){
+	// responsen entity je tip koji vracamo
+	public String driverStandings(Model model) {
 		List<Driver> drivers = driverService.getDriversByPoints();
 		model.addAttribute("drivers", drivers);
 
-	    return "driver_standings";
+		return "driver_standings";
 	}
-	
+
+
 	@GetMapping("/admin/new_driver")
-	//responsen entity je tip koji vracamo 
-	public  String newDriver(Model model){
+	// responsen entity je tip koji vracamo
+	public String newDriver(Model model) {
 		Driver driver = new Driver();
 		List<Nationality> nations = nationalityService.getAll();
 		List<Team> teams = teamsService.getAll();
 		model.addAttribute("driverForm", driver);
-		model.addAttribute("nations",nations);
-		model.addAttribute("teams",teams);
+		model.addAttribute("nations", nations);
+		model.addAttribute("teams", teams);
 
-	    return "new_driver";
+		return "new_driver";
 	}
-	
+
 	@PostMapping("/admin/new_driver")
 	public String newDriver(@ModelAttribute("nations") Nationality nationality,
 			@ModelAttribute("driverForm") Driver driverForm, @ModelAttribute("teams") Team team) {
@@ -92,5 +90,3 @@ public class DriverController {
 	}
 
 }
-
-
