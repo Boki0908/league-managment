@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.bf1el.dto.TeamCustom;
+import com.bf1el.model.Driver;
 import com.bf1el.model.Team;
 
 
@@ -32,6 +33,15 @@ public class TeamsController {
 		model.addAttribute("teams", teams);
 		//toDo mora da se napravi customMapping za novu klasu gde ce biti team i lista vozaca
 	    return "teams";
+	}
+	
+	@GetMapping("/team_standings")
+	// responsen entity je tip koji vracamo
+	public String teamStandings(Model model) {
+		List<Team> teams = teamsService.getAllTeamsOrderByPts();
+		model.addAttribute("teams", teams);
+
+		return "team_standings";
 	}
 	
 	

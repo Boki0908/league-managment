@@ -17,6 +17,11 @@ public class AppController {
     public String welcomeConvert(Model model) {
         return "redirect:/";
     }
+	
+	@GetMapping("/logout")
+    public String logout(Model model) {
+        return "redirect:/";
+    }
 	@GetMapping("/contact")
     public String contact(Model model) {
         return "contact";

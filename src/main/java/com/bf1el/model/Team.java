@@ -14,8 +14,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedNativeQueries;
 import javax.persistence.NamedNativeQuery;
 import javax.persistence.SqlResultSetMapping;
+import javax.persistence.SqlResultSetMappings;
 import javax.persistence.Table;
 
 import com.bf1el.dto.TeamsDrivers;
@@ -31,16 +33,15 @@ import lombok.Data;
 //ovde setujem sql mapiranje i nazivamo sa customTeamsMapping i zelimo da se rezultat nekog upita
 // upise klasu preko ovog ConstrucResult u klasu TeamDrivers sa navedenim boljima
 @SqlResultSetMapping(name="customTeamsMapping", 
-					classes = {
-							@ConstructorResult (
-									targetClass= TeamsDrivers.class,
-									columns = {@ColumnResult(name="teamId", type = Long.class),
-											@ColumnResult(name="teamName", type = String.class),
-											@ColumnResult(name="driverFirstName", type = String.class),
-											@ColumnResult(name="driverLastName", type = String.class),
-											@ColumnResult(name="driversFlag", type = String.class)})  
-					})
-
+classes = {
+		@ConstructorResult (
+				targetClass= TeamsDrivers.class,
+				columns = {@ColumnResult(name="teamId", type = Long.class),
+						@ColumnResult(name="teamName", type = String.class),
+						@ColumnResult(name="driverFirstName", type = String.class),
+						@ColumnResult(name="driverLastName", type = String.class),
+						@ColumnResult(name="driversFlag", type = String.class)})  
+})
 //izvrsavamo query i pozivamo metodu getAllTeamsWithDrivers iz repozitorijuma, odnosno ona je vec pozvana kroz kod
 // i ovde se izvrsava ovaj query a mapiraju se rezultati u customTeamsMapping ovo iznad
 @NamedNativeQuery(name = "Team.getAllTeamsWithDrivers" , resultSetMapping = "customTeamsMapping", 
@@ -86,4 +87,8 @@ public class Team implements Serializable {
 		
 		@Column(name = "team_logo")
 		private String teamLogo;
+		
+		@Column(name = "team_pts")
+		private Long teamPoints;
+		
 }

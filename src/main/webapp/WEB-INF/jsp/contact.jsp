@@ -1,16 +1,18 @@
 <%@ include file = "header-logged-user.jsp" %>
-<link rel="shortcut icon" type="image/png" href="${contextPath}../resources/images/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="welcome-box my-hi align-items-center"><h2 class="text-center ">Contact us</h2>
- <p class="text-center my-cl">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-        a matter of hours to help you.</p></div>
+
+ <div class="header-box">
+ <h2 style="padding:50px;" class="text-center" >CONTACT US</h2>
+ </div>>
+
 
 <section class="mb-4 my-clas">
 <!--  <h2 class="h1-responsive font-weight-bold text-center my-cl1 ">Contact us</h2>
  <p class="text-center w-responsive ">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>-->
     
-    <div class="row">
+    <div class="row" style="padding: 50px;">
 
         <div class="col-md-9 mb-md-0 mb-5">
             <form id="contact-form" name="contact-form" action="mail.php" method="POST">
@@ -64,18 +66,20 @@
        
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
-                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                <li><i class="fa fa-map-marker fa-2x"></i>
                     <p>Beograd,SRB</p>
                 </li>
 
-                <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                    <p>+ 381(60)6124-067</p>
+                <li><i class="fa fa-phone mt-4 fa-2x"></i>
+                    <p>+ 381(60)6124-000</p>
                 </li>
 
-                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                <li><i class="fa fa-envelope mt-4 fa-2x"></i>
                     <p>balkan.f1.esports.league@gmail.com</p>
                 </li>
+               
             </ul>
+   
         </div>
   
     </div>

@@ -5,7 +5,7 @@
 <%@ include file = "header-logged-user.jsp" %>
  <div class="welcome-box">
  <div class="header-box">
- <h2 class="table_hdrs" style="padding:50px; ">LIST OF ACTIVE BF1EL DRIVERS IN RES F1</h2></div>   
+ <h2 class="table_hdrs" style="padding:50px; ">LIST OF ACTIVE BF1EL DRIVERS IN<br> RES F1</h2></div>   
 	<div class="container listing container-teams">   
     <div class="row">
     <c:forEach items="${teams}" var="teams"> 

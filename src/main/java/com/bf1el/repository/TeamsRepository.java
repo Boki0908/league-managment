@@ -26,4 +26,8 @@ public interface TeamsRepository extends CustomRepository<Team, Long>	 {
 	//toDo customUpit
 	@Query(nativeQuery = true)
 	List<TeamsDrivers> getAllTeamsWithDrivers();
+	
+	//ovde sam imao i springom ORDER By ali sam hteo da napisem nativeQuery
+	@Query(value = "SELECT * FROM bf1el_db.team order by team_pts desc;", nativeQuery=true)
+	List<Team> getAllTeamsWithOrderByPts();
 }
