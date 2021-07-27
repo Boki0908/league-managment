@@ -25,7 +25,6 @@ public class TeamsController {
 	}
 
 	@GetMapping("/teams")
-	// responsen entity je tip koji vracamo
 	public String teams(Model model) {
 
 		List<TeamCustom> teams = teamsService.getCustomTeams();
@@ -34,7 +33,6 @@ public class TeamsController {
 	}
 
 	@GetMapping("/team_standings")
-	// responsen entity je tip koji vracamo
 	public String teamStandings(Model model) {
 		List<Team> teams = teamsService.getAllTeamsOrderByPts();
 		model.addAttribute("teams", teams);

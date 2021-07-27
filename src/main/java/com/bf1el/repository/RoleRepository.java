@@ -10,7 +10,7 @@ import com.bf1el.model.Role;
 
 @Repository
 public interface RoleRepository extends CustomRepository<Role, Long>{
-	// select *from role where role_name = :rolName
+	
 	Optional<Role> findByRolName(String rolName);;
 
 }

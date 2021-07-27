@@ -32,8 +32,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/resources/**", "/registration").permitAll()
                 .antMatchers("/contact").permitAll()
                 .antMatchers("/send").permitAll()
-                .antMatchers("/").permitAll()
                 .antMatchers("/home").permitAll()
+                .antMatchers("/").permitAll()
+                .antMatchers("/login").permitAll()
                 .anyRequest().authenticated()
                 .and()
             .formLogin()
@@ -42,6 +43,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
             .logout()
                 .permitAll();
+        
     }
 
     @Bean

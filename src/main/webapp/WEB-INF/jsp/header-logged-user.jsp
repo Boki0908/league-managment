@@ -57,15 +57,13 @@
     <c:if test="${pageContext.request.userPrincipal.name != null}">
         <form class="form-inline my-2 my-lg-0" method="POST" action="${contextPath}/logout">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-            <h2>Welcome ${pageContext.request.userPrincipal.name} | </h2>
+            <h2 class = "profile-name">Welcome ${pageContext.request.userPrincipal.name}  </h2>
         <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
         </form>
 
         
     </c:if>
  
-   <!--   <form method="get" action="/logout" class="form-inline my-2 my-lg-0">
-      <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
-    </form>-->
+
   </div>
 </nav>

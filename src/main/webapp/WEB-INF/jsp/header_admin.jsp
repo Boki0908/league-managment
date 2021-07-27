@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -57,7 +58,7 @@
     <c:if test="${pageContext.request.userPrincipal.name != null}">
         <form class="form-inline my-2 my-lg-0" method="GET" action="${contextPath}/admin/new_driver">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-            <h2>Welcome ${pageContext.request.userPrincipal.name} | </h2>
+            <h2 class = "profile-name">Welcome ${pageContext.request.userPrincipal.name} </h2>
         <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">Admin Panel</button>
         </form>
         <form class="form-inline my-2 my-lg-0" method="POST" action="${contextPath}/logout">

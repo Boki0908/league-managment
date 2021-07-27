@@ -37,12 +37,7 @@ public class AppController {
     public String welcomeConvert(Model model) {
         return "redirect:/";
     }
-	
-//	@GetMapping("/logout")
-//    public String logout(Model model) {
-//        return "redirect:/";
-//    }
-	
+
 	@GetMapping("/rules")
     public String rules(Model model) {
         return "rules";

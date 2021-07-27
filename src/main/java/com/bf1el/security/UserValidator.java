@@ -31,7 +31,7 @@ public class UserValidator implements Validator {
 
     @Override
     public void validate(Object o, Errors errors) {
-       // ovo je boxing- dakle ovo je pretvaranje object u user
+       
     	User user = (User) o;
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "NotEmpty");

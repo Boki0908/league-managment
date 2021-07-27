@@ -48,7 +48,6 @@ public class DriverController {
 
 
 	@GetMapping("/driver_standings")
-	// responsen entity je tip koji vracamo
 	public String driverStandings(Model model) {
 		List<Driver> drivers = driverService.getDriversByPoints();
 		model.addAttribute("drivers", drivers);
@@ -58,7 +57,6 @@ public class DriverController {
 
 
 	@GetMapping("/admin/new_driver")
-	// responsen entity je tip koji vracamo
 	public String newDriver(Model model) {
 		Driver driver = new Driver();
 		List<Nationality> nations = nationalityService.getAll();

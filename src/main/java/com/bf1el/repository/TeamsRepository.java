@@ -18,16 +18,16 @@ public interface TeamsRepository extends CustomRepository<Team, Long>	 {
 	Team findOneByTeamName(String name);
 
 	Optional<Team> findById(Long id);
-// promenio sam umesto long id sam napisao drvId i dole umesto driver user sam ispravio na driver driver
+
 	Team save(Team team);
 
 	List<Team> findAll();
 	
-	//toDo customUpit
+	
 	@Query(nativeQuery = true)
 	List<TeamsDrivers> getAllTeamsWithDrivers();
 	
-	//ovde sam imao i springom ORDER By ali sam hteo da napisem nativeQuery
+	
 	@Query(value = "SELECT * FROM bf1el_db.team order by team_pts desc;", nativeQuery=true)
 	List<Team> getAllTeamsWithOrderByPts();
 }

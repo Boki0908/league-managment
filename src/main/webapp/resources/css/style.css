@@ -308,7 +308,7 @@
 }
 
 .social_box ul li:hover {
-    background: ##F97300
+    background: #F97300
 }
 
 .social_box ul li i {
@@ -339,5 +339,9 @@
 .btn-primary {
     color: #eee;
     background-color: #e3790f;
-    border-color: #e3790f;
+    border-color: rgb(227, 121, 15);
+}
+
+.profile-name{
+	color:#e3790f;
 }

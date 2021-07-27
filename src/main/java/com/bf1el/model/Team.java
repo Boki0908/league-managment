@@ -30,8 +30,6 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 
 
-//ovde setujem sql mapiranje i nazivamo sa customTeamsMapping i zelimo da se rezultat nekog upita
-// upise klasu preko ovog ConstrucResult u klasu TeamDrivers sa navedenim boljima
 @SqlResultSetMapping(name="customTeamsMapping", 
 classes = {
 		@ConstructorResult (
@@ -42,8 +40,7 @@ classes = {
 						@ColumnResult(name="driverLastName", type = String.class),
 						@ColumnResult(name="driversFlag", type = String.class)})  
 })
-//izvrsavamo query i pozivamo metodu getAllTeamsWithDrivers iz repozitorijuma, odnosno ona je vec pozvana kroz kod
-// i ovde se izvrsava ovaj query a mapiraju se rezultati u customTeamsMapping ovo iznad
+
 @NamedNativeQuery(name = "Team.getAllTeamsWithDrivers" , resultSetMapping = "customTeamsMapping", 
 query = "SELECT\r\n"
 		+ "team.team_id as teamId, \r\n"

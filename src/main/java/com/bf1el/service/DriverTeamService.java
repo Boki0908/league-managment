@@ -37,9 +37,9 @@ public class DriverTeamService {
 		@Transactional
 		public DriverTeam create(DriverTeam driverTeam) {
 			
-			// moze odmah da ide u return
+			
 			DriverTeam drvTeam = driverTeamRepository.save(driverTeam);
 			return drvTeam;
-			// return driverRepository.save(driver);
+			
 		}	
 }

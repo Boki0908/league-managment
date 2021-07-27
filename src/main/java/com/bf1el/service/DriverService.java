@@ -22,7 +22,6 @@ public class DriverService {
 	
 	private DriverRepository driverRepository;
 	
-	//Dependency Injection ostvarujemo kroz konstruktor. Injectujemo repository u servis
 	@Autowired
 	public DriverService(DriverRepository driverRepository) {
 		this.driverRepository = driverRepository;
@@ -47,14 +46,11 @@ public class DriverService {
 	@Transactional
 	public Driver create(Driver driver) {
 		
-		// moze odmah da ide u return
 		Driver drv = driverRepository.save(driver);
 		return drv;
-		// return driverRepository.save(driver);
+		
 	}
 	
-	//znaci da ako slucajno u toku neke radnje na pola pokne nesto, da rollbackuje sve na pocetno stanje
-	// pre bilo kakvog editovanja
 	@Transactional
 	public Driver importNewDriver(Driver driverForm, Nationality nat, Team team) {
 		Driver drv = new Driver();
