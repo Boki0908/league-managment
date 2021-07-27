@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.bf1el.model.Contact;
+import com.bf1el.dto.Contact;
 import com.bf1el.service.MailService;
 
 @Controller
@@ -28,7 +28,7 @@ public class ContactController {
 		String contentHeader= "Name:" + contact.getName(); 
 		String content = contentHeader + "<br>" + contact.getContent();
 		mailService.sendEmail("bojanobradovic@gmail.com", contact.getEmail(), contact.getSubject(), content);
-		modelMap.put("msg", "Done");
+		
 		} catch (Exception e) {
 		modelMap.put("msg", e.getMessage());
 		}

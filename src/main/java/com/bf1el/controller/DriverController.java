@@ -37,7 +37,7 @@ public class DriverController {
 		this.nationalityService = nationalityService;
 		this.teamsService = teamsService;
 	}
-
+	//ENDPOINT
 	@GetMapping("/drivers")
 	// responsen entity je tip koji vracamo
 	public String drivers(Model model) {
@@ -46,18 +46,6 @@ public class DriverController {
 		return "drivers";
 	}
 
-	@GetMapping("/{id}")
-	public ResponseEntity<?> findById(@PathVariable("id") Long id) {
-		return new ResponseEntity(driverService.findById(id), HttpStatus.OK);
-
-	}
-
-	@PostMapping
-	public ResponseEntity<?> add(@RequestBody Driver input) throws Exception {
-		Driver driverDB = driverService.create(input);
-
-		return new ResponseEntity(driverDB, HttpStatus.CREATED);
-	}
 
 	@GetMapping("/driver_standings")
 	// responsen entity je tip koji vracamo

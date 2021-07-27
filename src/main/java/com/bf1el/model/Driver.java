@@ -17,9 +17,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 // Entity predstavlja dakle entitet Driver koji ce biti sacuvan u DB
 // Ova klasa je model koji predstavlja tabelu driver

@@ -1,4 +1,4 @@
-package com.bf1el.model;
+package com.bf1el.dto;
 
 import lombok.Data;
 

@@ -15,7 +15,7 @@ import com.bf1el.repository.DriverTeamRepository;
 @Service
 public class DriverTeamService {
 
-	@Autowired
+	
 	private DriverTeamRepository driverTeamRepository;
 	
 	@Autowired

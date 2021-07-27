@@ -22,7 +22,7 @@ import com.bf1el.repository.TeamsRepository;
 @Service
 public class TeamsService {
 
-	@Autowired
+	
 	private TeamsRepository teamsRepository;
 
 	// Dependency Injection ostvarujemo kroz konstruktor. Injectujemo repository u

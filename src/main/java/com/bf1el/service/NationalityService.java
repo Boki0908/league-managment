@@ -11,7 +11,7 @@ import com.bf1el.repository.NationalityRepository;
 @Service
 public class NationalityService {
 
-	NationalityRepository nationalityRepository;
+	private NationalityRepository nationalityRepository;
 	
 	@Autowired
 	public NationalityService(NationalityRepository nationalityRepository) {

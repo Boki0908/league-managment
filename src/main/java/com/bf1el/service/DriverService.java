@@ -19,7 +19,7 @@ import com.bf1el.repository.DriverRepository;
 @Service
 public class DriverService {
 	
-	@Autowired
+	
 	private DriverRepository driverRepository;
 	
 	//Dependency Injection ostvarujemo kroz konstruktor. Injectujemo repository u servis
