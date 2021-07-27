@@ -44,5 +44,6 @@ body {
 }
 
 .has-error {
-    color: red
+    color: red;
+        font-size: initial;
 }

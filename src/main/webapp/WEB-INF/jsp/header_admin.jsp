@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -18,7 +19,7 @@
 
 <nav class="custom-nvbar navbar navbar-expand-lg navbar-light bg-light">
   <a class="custom-nav" href="/">
-  <img style="max-width:100px; margin-top: -7px;"
+  <img style="max-width:100px; margin-top: 7px;"
              src="${contextPath}/resources/images/bf1el-logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -52,12 +53,24 @@
         <a class="custom-nav" href="/contact">Contact</a>
       </li>
     </ul>
-     <form method="get" action="/login" class="form-inline my-2 my-lg-0">
-      <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">LOGIN</button>
-      
-    </form>
-    <form method="get" action="/registration" class="form-inline my-2 my-lg-0">
-      <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">Registration</button>
-    </form>
+    
+    <c:if test="${pageContext.request.userPrincipal.name != null}">
+        <form class="form-inline my-2 my-lg-0" method="GET" action="${contextPath}/admin/new_driver">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            <h2>Welcome ${pageContext.request.userPrincipal.name} | </h2>
+        <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">Admin Panel</button>
+        </form>
+        <form class="form-inline my-2 my-lg-0" method="POST" action="${contextPath}/logout">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    
+        <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+        </form>
+
+        
+    </c:if>
+ 
+   <!--   <form method="get" action="/logout" class="form-inline my-2 my-lg-0">
+      <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+    </form>-->
   </div>
 </nav>

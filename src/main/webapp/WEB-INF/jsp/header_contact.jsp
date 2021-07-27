@@ -52,12 +52,6 @@
         <a class="custom-nav" href="/contact">Contact</a>
       </li>
     </ul>
-     <form method="get" action="/login" class="form-inline my-2 my-lg-0">
-      <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">LOGIN</button>
-      
-    </form>
-    <form method="get" action="/registration" class="form-inline my-2 my-lg-0">
-      <button class="lg-btn btn btn-outline-success my-2 my-sm-0" type="submit">Registration</button>
-    </form>
+   
   </div>
 </nav>

@@ -1,3 +1,4 @@
+
 package com.bf1el.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
             .authorizeRequests()
                 .antMatchers("/resources/**", "/registration").permitAll()
+                .antMatchers("/contact").permitAll()
+                .antMatchers("/send").permitAll()
                 .antMatchers("/").permitAll()
                 .antMatchers("/home").permitAll()
                 .anyRequest().authenticated()

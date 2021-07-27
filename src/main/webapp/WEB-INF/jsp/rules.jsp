@@ -1,4 +1,4 @@
-<%@ include file = "header.jsp" %>
+<%@ include file = "header-logged-user.jsp" %>
 
 
 <div class="welcome-box">

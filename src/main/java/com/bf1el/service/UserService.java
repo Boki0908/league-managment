@@ -1,13 +1,20 @@
 package com.bf1el.service;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import com.bf1el.common.EntityNotFoundException;
 import com.bf1el.model.Role;
@@ -74,5 +81,43 @@ public class UserService {
 					.build();
 			
 			this.userRoleRepository.save(input);
+		}
+		
+		public String getLoggedInUserRole() {
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+			if (!(authentication instanceof AnonymousAuthenticationToken)) {
+			    Collection<? extends GrantedAuthority> roles = authentication.getAuthorities();
+			    
+			   
+			    for(GrantedAuthority role: roles) {
+			    	if(role.getAuthority().equals("ROLE_admin")) {
+			    		return "ADMIN";
+			    	}
+			    }
+			}
+			return null;
+		}
+		
+		public List<String> getLoggedRoles() {
+			List<String> roles = new ArrayList<String>();
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+			if (!(authentication instanceof AnonymousAuthenticationToken)) {
+			    Collection<? extends GrantedAuthority> roles1 = authentication.getAuthorities();
+			    
+			   
+			    for(GrantedAuthority role: roles1) {
+			    	if(role.getAuthority() != null) {
+			    		roles.add(role.getAuthority());
+			    	}
+			    }
+			}
+			return roles;
+		}
+		
+		public Boolean userHasRole(List<String> roles) {
+			if(roles == null || roles.size() == 0) {
+				return false;
+			}
+			return true;
 		}
 }
