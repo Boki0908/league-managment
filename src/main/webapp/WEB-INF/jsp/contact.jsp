@@ -90,35 +90,6 @@
 
  
  ${msg}
- <!--  
-<form:form method="post" modelAttribute="contact" action="${pageContext.request.contextPath}/send">
- <table>
-	<tr>
-	 	<td>Name</td>
-	 	<td><form:input path="name" /></td>
- 	</tr>
- 	<tr>
-	 	<td>Phone</td>
-	 	<td><form:input path="phone" /></td>
- 	</tr>
- 	<tr>
-	 	<td>Email</td>
-	 	<td><form:input path="email" /></td>
- 	</tr>
- 	<tr>
-	 	<td>Address</td>
-	 	<td><form:input path="address" /></td>
- 	</tr>
- 	<tr>
-	 	<td valign="top">Subject</td>
-	 	<td><form:textarea path="subject" rows="5" cols="20" /></td>
- 	</tr>
- 	<tr>
-	 	<td>&nbsp;</td>
-	 	<td><input type="submit" value="Send" /></td>
- 	</tr>
- 	
- </table>
- </form:form> -->
+
  
 <%@ include file = "footer.jsp" %>

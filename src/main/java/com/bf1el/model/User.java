@@ -39,8 +39,7 @@ public class User implements Serializable{
 	@Column(name = "user_username")
 	private String username;
 	
-	// ne bi bilo lose gender da imamo mr ili ms
-	
+		
 	@Column(name = "user_password")
 	private String password;
 	

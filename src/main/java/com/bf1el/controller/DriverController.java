@@ -39,7 +39,6 @@ public class DriverController {
 	}
 	//ENDPOINT
 	@GetMapping("/drivers")
-	// responsen entity je tip koji vracamo
 	public String drivers(Model model) {
 		List<Driver> drivers = driverService.getAll();
 		model.addAttribute("drivers", drivers);

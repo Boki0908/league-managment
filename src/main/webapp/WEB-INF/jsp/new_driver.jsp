@@ -37,7 +37,7 @@
           </div> 
           </div> 
           
-          <!--  this is second row  -->
+        
             <div class="row">
         <div class="col-12 col-md-6"> 
             <spring:bind path="drvUsername">
@@ -59,7 +59,7 @@
             </div> 
             </div> 
         
-			<!--  this is third row  -->
+			
            <div class="row drow-downs-custom">
             <div class="col-12 col-md-6"> 
             
@@ -91,7 +91,7 @@
       		</div>
            </div>
            
-           <!--  this is forth row  -->
+          
            <div class="row">
             <div class="col-12 col-md-6"> 
             <spring:bind path="drvNumber">
@@ -113,7 +113,7 @@
             </div>
             </div>
             
-            <!--  this is fifth row  -->
+          
            <div class="row">
             <div class="col-12 col-md-6"> 
             <spring:bind path="drvWins">

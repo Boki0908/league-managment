@@ -19,14 +19,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;
 
-// Entity predstavlja dakle entitet Driver koji ce biti sacuvan u DB
-// Ova klasa je model koji predstavlja tabelu driver
+
 @Entity
 @Table(name = "driver")
-//lombok bilbiotkea koja pravi automatski getere , setere i procitaj na netu sta jos.
 @Data
-// lombok anotacija za konstruktor bez parametara
-//ignorise dodatne json propertije u requestu
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Driver implements Serializable {
 	
