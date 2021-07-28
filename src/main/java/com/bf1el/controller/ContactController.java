@@ -27,7 +27,8 @@ public class ContactController {
 		try {
 		String contentHeader= "Name:" + contact.getName(); 
 		String content = contentHeader + "<br>" + contact.getContent();
-		mailService.sendEmail("bojanobradovic@gmail.com", contact.getEmail(), contact.getSubject(), content);
+		// ovde treba da ide admin mail u input metode send mail na drugom mestu.
+		mailService.sendEmail("bojanobradovic@gmail.com", "bojanobradovic@gmail.com", contact.getSubject(), content);
 		
 		} catch (Exception e) {
 		modelMap.put("msg", e.getMessage());
