@@ -25,9 +25,10 @@ public class ContactController {
 	@PostMapping("/send")
 	public String send(@ModelAttribute("contact") Contact contact, ModelMap modelMap) {
 		try {
-		String contentHeader= "Name:" + contact.getName(); 
+		String contentHeader= "Name: " + contact.getName() + "<br>"
+				+ "Contact Email Address: " + contact.getEmail(); 
 		String content = contentHeader + "<br>" + contact.getContent();
-		mailService.sendEmail("bojanobradovic@gmail.com", contact.getEmail(), contact.getSubject(), content);
+		mailService.sendEmail("bojanobradovic@gmail.com", "bojanobradovic@gmail.com", contact.getSubject(), content);
 		
 		} catch (Exception e) {
 		modelMap.put("msg", e.getMessage());
